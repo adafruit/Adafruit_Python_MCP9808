@@ -18,10 +18,10 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
+
 import logging
 import math
 
-import Adafruit_GPIO.I2C as I2C
 
 # Default I2C address for device.
 MCP9808_I2CADDR_DEFAULT        = 0x18
@@ -52,13 +52,17 @@ class MCP9808(object):
 	board.
 	"""
 
-	def __init__(self, address=MCP9808_I2CADDR_DEFAULT, busnum=I2C.get_default_bus()):
+	def __init__(self, address=MCP9808_I2CADDR_DEFAULT, i2c=None, **kwargs):
 		"""Initialize MCP9808 device on the specified I2C address and bus number.
 		Address defaults to 0x18 and bus number defaults to the appropriate bus
 		for the hardware.
 		"""
 		self._logger = logging.getLogger('Adafruit_MCP9808.MCP9808')
-		self._device = I2C.Device(address, busnum)
+		if i2c is None:
+			import Adafruit_GPIO.I2C as I2C
+			i2c = I2C
+		self._device = i2c.get_i2c_device(address, **kwargs)
+
 
 	def begin(self):
 		"""Start taking temperature measurements. Returns True if the device is 
