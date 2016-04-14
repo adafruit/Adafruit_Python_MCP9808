@@ -3,7 +3,7 @@ use_setuptools()
 from setuptools import setup, find_packages
 
 setup(name              = 'Adafruit_MCP9808',
-      version           = '1.5.0',
+      version           = '1.5.1',
       author            = 'Tony DiCola',
       author_email      = 'tdicola@adafruit.com',
       description       = 'Library for accessing the MCP9808 precision temperature sensor on a Raspberry Pi or Beaglebone Black.',
