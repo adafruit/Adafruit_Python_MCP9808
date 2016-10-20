@@ -18,7 +18,7 @@ classifiers = ['Development Status :: 4 - Beta',
                'Topic :: System :: Hardware']
 
 setup(name              = 'Adafruit_MCP9808',
-      version           = '1.5.2',
+      version           = '1.5.3',
       author            = 'Tony DiCola',
       author_email      = 'tdicola@adafruit.com',
       description       = 'Library for accessing the MCP9808 precision temperature sensor on a Raspberry Pi or Beaglebone Black.',
