@@ -1,5 +1,17 @@
-Adafruit Python MCP9808
-=======================
+DEPRECATED LIBRARY Adafruit Python MCP9808
+===================
+
+This library has been deprecated!
+
+we are now only using our circuitpython sensor libraries in python
+
+we are leaving the code up for historical/research purposes but archiving the repository.
+
+check out this guide for using the mcp9808 with python!
+https://learn.adafruit.com/adafruit-mcp9808-precision-i2c-temperature-sensor-guide
+
+
+#
 
 Python library for accessing the MCP9808 precision temperature sensor on a Raspberry Pi or Beaglebone Black.
 
